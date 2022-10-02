@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/layout/activity_now_playing.xml" value="0.17806484295845998" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/drawable/custom_button.xml" value="0.152" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/drawable/round_button.xml" value="0.181" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/drawable/round_button_left_arrow.xml" value="0.196" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/drawable/round_button_right_arrow.xml" value="0.1035" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/layout/activity_now_playing.xml" value="0.33" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/layout/activity_trending.xml" value="0.2" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/layout/activity_trending_detail.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/layout/custom_button.xml" value="0.365625" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/layout/now_playing_viewholder.xml" value="0.21" />
+        <entry key="..\:/Users/coale/AndroidStudioProjects/CodePath_Project_4_Flixster2/app/src/main/res/layout/trending_now_viewholder.xml" value="0.33" />
       </map>
     </option>
   </component>
@@ -12,5 +21,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.5" />
+      </ProjectState>
+    </option>
   </component>
 </project>

@@ -34,13 +34,13 @@
         app:layout_constraintTop_toBottomOf="@+id/posterImageView"
         tools:text="Overview text" />
 
-    <Button
+    <ImageButton
         android:id="@+id/goBackBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Button"
+        android:background="@drawable/round_button_left_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

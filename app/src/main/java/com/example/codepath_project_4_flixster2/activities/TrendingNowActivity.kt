@@ -2,7 +2,7 @@ package com.example.flixster
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -28,11 +28,11 @@ class TrendingNowActivity : AppCompatActivity(){
         moviesRecyclerView = findViewById(R.id.trendingNowRecyclerView)
         val trendingAdapter = TrendingNowRecyclerViewAdapter(this, moviesTrendingNow)
         moviesRecyclerView.adapter = trendingAdapter
-        moviesRecyclerView.layoutManager = GridLayoutManager(this, 2)
+        moviesRecyclerView.layoutManager = GridLayoutManager(this, 1)
 
         //Navigation
         val nav = Navigation()
-        val scrollBtn = findViewById<Button>(R.id.scrollLeftBtn)
+        val scrollBtn = findViewById<ImageButton>(R.id.scrollLeftBtn)
         scrollBtn.setOnClickListener {
             nav.navToNowPlaying(this)
         }

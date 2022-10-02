@@ -1,3 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">CodePath_Project_4_Flixster2</string>
+    <string name="release_date">Release Date: %s</string>
 </resources>

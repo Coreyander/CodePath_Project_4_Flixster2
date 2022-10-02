@@ -2,6 +2,7 @@ package com.example.flixster
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +12,7 @@ import com.example.flixster.trendingmodel.TrendingResult
 
 
 class TrendingDetailActivity: AppCompatActivity() {
-    private lateinit var btn: Button
+    private lateinit var btn: ImageButton
     private lateinit var overview: TextView
     private lateinit var poster: ImageView
 

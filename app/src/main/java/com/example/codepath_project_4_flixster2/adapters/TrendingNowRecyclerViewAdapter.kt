@@ -25,8 +25,8 @@ class TrendingNowRecyclerViewAdapter(private val context: Context,
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
         var item: TrendingResult? = null
+        val rankingTextView: TextView = itemView.findViewById(R.id.ranking)
         val posterImageView: ImageView = itemView.findViewById(R.id.posterImageView)
-        val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val popularityTextView: TextView = itemView.findViewById(R.id.popularityTextView)
 
         init {
@@ -49,8 +49,9 @@ class TrendingNowRecyclerViewAdapter(private val context: Context,
         val posterBaseUrl = "https://image.tmdb.org/t/p/w500"
         holder.item = model
         model.posterPath = posterBaseUrl+model.posterPath
-        holder.titleTextView.text = model.title
-        holder.popularityTextView.text = model.popularity.toString()
+        holder.popularityTextView.text = "Popularity Rating: " + model.popularity.toString()
+        val rank = position+1
+        holder.rankingTextView.text = rank.toString() + "."
         Glide.with(context)
             .load(movies[position].posterPath)
             .placeholder(R.drawable.gator_ate_it)
@@ -63,7 +64,9 @@ class TrendingNowRecyclerViewAdapter(private val context: Context,
 
     fun updateData(data: MutableList<TrendingResult>) {
         movies.addAll(data)
+        movies.sortByDescending { it.popularity }
         notifyDataSetChanged()
     }
+
 
 }

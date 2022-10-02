@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.*
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.codepath_project_4_flixster2.RetrofitInterface
 import com.example.flixster.models.NowPlayingModel
 import com.example.codepath_project_4_flixster2.navigation.Navigation
@@ -28,11 +29,11 @@ class NowPlayingActivity : AppCompatActivity() {
         moviesRecyclerView = findViewById(R.id.nowPlayingRecyclerView)
         val nowPlayingAdapter = NowPlayingRecyclerViewAdapter(this, moviesNowPlaying)
         moviesRecyclerView.adapter = nowPlayingAdapter
-        moviesRecyclerView.layoutManager = GridLayoutManager(this, 2)
+        moviesRecyclerView.layoutManager = StaggeredGridLayoutManager(2, 1)
 
         //Navigation
         val nav = Navigation()
-        val scrollBtn = findViewById<Button>(R.id.scrollRightBtn)
+        val scrollBtn = findViewById<ImageButton>(R.id.scrollRightBtn)
         scrollBtn.setOnClickListener {
             nav.navToTrending(this)
         }

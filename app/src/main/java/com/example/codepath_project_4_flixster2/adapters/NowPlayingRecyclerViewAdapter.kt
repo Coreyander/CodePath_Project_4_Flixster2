@@ -1,6 +1,7 @@
 package com.example.flixster
 
 import android.content.Context
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,7 +35,7 @@ class NowPlayingRecyclerViewAdapter(private val context: Context,
         holder.item = model
         model.posterPath = posterBaseUrl+model.posterPath
         holder.titleTextView.text = model.title
-        holder.releaseDateTextView.text = model.releaseDate
+        holder.releaseDateTextView.text = "Release Date:  " + model.releaseDate
         holder.overviewTextView.text = model.overview
         Glide.with(context)
             .load(model.posterPath)
