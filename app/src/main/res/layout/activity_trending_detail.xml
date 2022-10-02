@@ -43,4 +43,27 @@
         android:background="@drawable/round_button_left_arrow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/voteAverageTextView"
+        android:layout_width="354dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="10dp"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/overviewTextView" />
+
+    <TextView
+        android:id="@+id/voteCountTextView"
+        android:layout_width="358dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voteAverageTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

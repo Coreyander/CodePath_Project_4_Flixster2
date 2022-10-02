@@ -15,6 +15,8 @@ class TrendingDetailActivity: AppCompatActivity() {
     private lateinit var btn: ImageButton
     private lateinit var overview: TextView
     private lateinit var poster: ImageView
+    private lateinit var voteAverage: TextView
+    private lateinit var voteCount: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,11 +24,15 @@ class TrendingDetailActivity: AppCompatActivity() {
 
         poster = findViewById(R.id.posterImageView)
         overview = findViewById(R.id.overviewTextView)
+        voteAverage = findViewById(R.id.voteAverageTextView)
+        voteCount = findViewById(R.id.voteCountTextView)
         btn = findViewById(R.id.goBackBtn)
 
         val trendingModel = intent.getSerializableExtra(TRENDING_EXTRA) as TrendingResult
 
         overview.text = trendingModel.overview
+        voteAverage.text = "Average: " + trendingModel.voteAverage.toString()
+        voteCount.text = "Vote Count: " + trendingModel.voteCount.toString()
 
 
         // TODO: Load the media image
