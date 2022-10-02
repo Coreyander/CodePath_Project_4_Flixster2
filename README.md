@@ -40,6 +40,11 @@ GIF created with GIF Maker-Editor
 
 ## Notes
 
+**Integrating your API Key:**
+Under the app level view in Andriod Studio, inside the *Gradle Scripts* package
+add API_KEY="<<your api key>>" to the file *local.properties*
+
+
 Describe any challenges encountered while building the app.
 
 Long load times for API calls in the emulator caused me to start using my phone in debug mode.
