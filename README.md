@@ -33,7 +33,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='hAppWalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='AppWalkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 GIF created with GIF Maker-Editor 
