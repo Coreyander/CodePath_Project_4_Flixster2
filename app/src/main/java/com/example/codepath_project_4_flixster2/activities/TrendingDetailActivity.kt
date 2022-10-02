@@ -1,11 +1,14 @@
 package com.example.flixster
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityOptionsCompat
 import com.bumptech.glide.Glide
 import com.example.codepath_project_4_flixster2.navigation.Navigation
 import com.example.flixster.trendingmodel.TrendingResult
@@ -44,7 +47,12 @@ class TrendingDetailActivity: AppCompatActivity() {
 
         val nav = Navigation()
         btn.setOnClickListener{
-            nav.navToTrending(this)
+            val intent = Intent(this, TrendingNowActivity::class.java)
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                this@TrendingDetailActivity,
+                (poster as View?)!!, "poster"
+            )
+            this.startActivity(intent, options.toBundle())
         }
     }
 }

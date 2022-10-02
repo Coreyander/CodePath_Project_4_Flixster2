@@ -1,9 +1,12 @@
 package com.example.flixster
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.*
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -35,7 +38,12 @@ class NowPlayingActivity : AppCompatActivity() {
         val nav = Navigation()
         val scrollBtn = findViewById<ImageButton>(R.id.scrollRightBtn)
         scrollBtn.setOnClickListener {
-            nav.navToTrending(this)
+            val intent = Intent(this, TrendingNowActivity::class.java)
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                this@NowPlayingActivity,
+                (moviesRecyclerView as View?)!!, "poster"
+            )
+            this.startActivity(intent, options.toBundle())
         }
 
         //JSON to Kotlin conversion

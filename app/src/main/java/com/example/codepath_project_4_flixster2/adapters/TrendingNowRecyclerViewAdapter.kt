@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintSet
+import androidx.core.app.ActivityOptionsCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.flixster.trendingmodel.TrendingResult
+
 
 const val TRENDING_EXTRA = "TRENDING_EXTRA"
 
@@ -39,7 +40,11 @@ class TrendingNowRecyclerViewAdapter(private val context: Context,
             //Navigate to Details screen and pass selected article
             val intent = Intent(context, TrendingDetailActivity::class.java)
             intent.putExtra(TRENDING_EXTRA, data)
-            context.startActivity(intent)
+            val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                context as TrendingNowActivity,
+                (posterImageView as View?)!!, "poster"
+            )
+            context.startActivity(intent, options.toBundle())
         }
     }
 

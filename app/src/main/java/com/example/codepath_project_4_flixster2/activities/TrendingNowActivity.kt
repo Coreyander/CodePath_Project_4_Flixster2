@@ -1,5 +1,6 @@
 package com.example.flixster
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
@@ -31,10 +32,10 @@ class TrendingNowActivity : AppCompatActivity(){
         moviesRecyclerView.layoutManager = GridLayoutManager(this, 1)
 
         //Navigation
-        val nav = Navigation()
         val scrollBtn = findViewById<ImageButton>(R.id.scrollLeftBtn)
         scrollBtn.setOnClickListener {
-            nav.navToNowPlaying(this)
+            val intent = Intent(this, NowPlayingActivity::class.java)
+            this.startActivity(intent)
         }
 
 
@@ -66,5 +67,4 @@ class TrendingNowActivity : AppCompatActivity(){
         })
         //call end
     }
-
 }

@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.flixster.models.NowPlayingResult
 
 class NowPlayingRecyclerViewAdapter(private val context: Context,
@@ -37,8 +38,12 @@ class NowPlayingRecyclerViewAdapter(private val context: Context,
         holder.titleTextView.text = model.title
         holder.releaseDateTextView.text = "Release Date:  " + model.releaseDate
         holder.overviewTextView.text = model.overview
+        /** TODO: Explore Glide transformations --> https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations **/
+        val radius = 30
         Glide.with(context)
             .load(model.posterPath)
+            //.centerCrop()
+            //.transform(RoundedCorners(radius))
             .placeholder(R.drawable.gator_ate_it)
             .into(holder.posterImageView)
     }
